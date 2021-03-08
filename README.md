@@ -1,5 +1,9 @@
 # vue-codemirror-editor
 
+## Screen Shot
+
+![](./Screenshot.png)
+
 ## Project setup
 ```
 yarn install
