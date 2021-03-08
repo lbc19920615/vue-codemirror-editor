@@ -8,6 +8,10 @@ export let codeMirrorFormateMixin = {
       // console.log('editor', editor)
       var range = getSelectedRange(editor);
       editor.autoFormatRange(range.from, range.to);
+    },
+    autoCommentSelection(editor) {
+      var range = getSelectedRange(editor);
+      editor.commentRange(true, range.from, range.to);
     }
   }
 }

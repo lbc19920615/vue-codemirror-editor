@@ -4,14 +4,16 @@
   align-items: center;
   justify-items: flex-start;
 }
+.cm-editor-bar-item + .cm-editor-bar-item {
+  margin-left: 10px;
+}
 </style>
 
 <template>
   <div class="cm-editor">
     <div class="cm-editor-actionbar" v-if="showCodeMirrorAction">
-      <div class="cm-editor-baritem">
-        <button @click="autoFormatSelection(editor)">格式化</button>
-      </div>
+      <button class="cm-editor-bar-item"  @click="autoFormatSelection(editor)">格式化</button>
+      <button class="cm-editor-bar-item" @click="autoCommentSelection(editor)">注释</button>
     </div>
     <codemirror
         class="cm-editor-codemirror"
